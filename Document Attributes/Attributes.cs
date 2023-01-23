@@ -26,6 +26,9 @@ namespace DocumentAttribute
     [Document("This is a sample class", " sample input parameters")]
     public class SampleClass
     {
+      
+
+       
         [Document("This is a sample method", "input parameters", "output parameters")]
         public string SampleMethod(string name)
         {
