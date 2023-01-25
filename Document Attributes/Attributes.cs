@@ -29,7 +29,7 @@ namespace DocumentAttribute
       
 
        
-        [Document("This is a sample method", "input parameters", "output parameters")]
+        [Document("This is a sample method", "method input parameters", "method output parameters")]
         public string SampleMethod(string name)
         {
             return name + " is a student of " + SchoolEnum.Brighgirls;
