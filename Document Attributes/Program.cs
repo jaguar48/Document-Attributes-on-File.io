@@ -28,7 +28,7 @@ namespace DocumentAttribute
                         DocumentAttribute attribute = (DocumentAttribute)doc;
                        
 
-                        File.AppendAllText(FilePath, $"{attribute.Description} \n {attribute.Input} \n {attribute.Output} \n");
+                        File.AppendAllText(FilePath, $"{attribute.Description} \n {attribute.Input} \n {attribute.Output} \n \n");
                       
                     }
                 }
@@ -46,14 +46,13 @@ namespace DocumentAttribute
 
                     DocumentAttribute attribute = (DocumentAttribute)attr;
 
-                    /*Filewrites(attribute);*/
+                   
 
                     SaveAsJsonFormat(attribute.Description, @"C:/Users/HP/Downloads/Myfile4.json");
 
-                    
-                   /* Console.WriteLine($"{attribute.Description} \n {attribute.Input}");*/
+                 
 
-                    File.AppendAllText(FilePath, $"{attribute.Description} \n {attribute.Input} \n");
+                    File.AppendAllText(FilePath, $"{attribute.Description} \n {attribute.Input} \n \n");
 
                 }
             }
