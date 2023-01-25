@@ -59,18 +59,7 @@ namespace DocumentAttribute
             }
 
         }
-       /* public static void Filewrites(DocumentAttribute attribute)
-        {
-           
-
-            using (StreamWriter mywrite = new StreamWriter(FilePath))
-            {
-                mywrite.Write(attribute.Description);
-                mywrite.Write(attribute.Input);
-                mywrite.Write(attribute.Output);
-                mywrite.Flush();
-            }
-        }*/
+     
     
 
         public static void SaveAsJsonFormat<T>(T objGraph, string fileName)
@@ -94,9 +83,8 @@ namespace DocumentAttribute
                     if (myprop is DocumentAttribute)
                     {
                         DocumentAttribute attribute = (DocumentAttribute)myprop;
-                        /*Filewrites(attribute);*/
-                        Console.WriteLine(attribute.Description);
-                        Console.WriteLine(attribute.Input);
+
+                        File.AppendAllText(FilePath, $"{attribute.Description} \n {attribute.Input} \n {attribute.Output} \n");
                     }
                 }
 
